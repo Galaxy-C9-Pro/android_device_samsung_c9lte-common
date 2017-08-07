@@ -25,7 +25,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter gts210vewifi gts28vewifi c9lte c9ltechn,$(TARGET_DEVICE)),)
+ifneq ($(filter c9lte c9ltechn gts210vewifi gts28vewifi,$(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
