@@ -100,6 +100,9 @@ on boot
     # if already exist
     chown radio system /efs/bluetooth
     chmod 0775 /efs/bluetooth
+	
+    # Need for telephony services
+    chmod 644 /proc/cmdline
 
     # rmt_storage
     chown system system /sys/kernel/debug/rmt_storage/status
