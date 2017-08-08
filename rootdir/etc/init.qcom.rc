@@ -1212,10 +1212,6 @@ on boot
     chmod 0760 /sys/class/sensor_event/symlink/proximity_sensor/trigger/current_trigger
     chmod 0760 /sys/class/sensor_event/symlink/proximity_sensor/uevent
 
-    # BT
-    chown radio net_bt_stack /efs/bluetooth/bt_addr
-    chmod 0640 /efs/bluetooth/bt_addr
-
 # msm specific files that need to be created on /data
 on post-fs-data
     # Create directory for TZ Apps
@@ -1377,6 +1373,10 @@ on property:sys.boot_completed=1
     # CPE fw_name used by sound trigger HAL
     chown media audio /sys/kernel/wcd_cpe0/fw_name
 
+on property:vold.decrypt=trigger_restart_framework
+    start config_bt_addr
+    start wcnss-service
+
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
@@ -1417,6 +1417,18 @@ service start_hci_filter /system/bin/wcnss_filter
     user bluetooth
     group bluetooth qcom_diag
     disabled
+
+service wcnss-service /system/bin/wcnss_service
+    class main
+    user system
+    group system wifi radio
+    oneshot
+
+service config_bt_addr /system/bin/btnvtool -O
+    class core
+    user bluetooth
+    group bluetooth radio
+    oneshot
 
 # FM
 on property:hw.fm.init=0
