@@ -38,8 +38,8 @@
 /dev/smd0                 0660   system     system
 /dev/smd4                 0660   system     system
 /dev/smd_cxm_qmi          0640   radio      radio
-/dev/smd5                 0660   system     system
-/dev/smd6                 0660   system     system
+/dev/smd5                 0660   bluetooth  bluetooth
+/dev/smd6                 0660   bluetooth  bluetooth
 /dev/smd7                 0660   bluetooth  bluetooth
 /dev/ccid_bridge          0660   system     system
 /dev/ipa                  0660   system     net_admin
@@ -49,7 +49,7 @@
 /dev/dpl_ctrl             0660   usb        usb
 
 #permissions for CSVT
-/dev/smd11                0660   radio      radio
+/dev/smd11                0660   system      loop_radio
 
 /dev/radio0               0640   system     system
 /dev/rfcomm0              0660   bluetooth  bluetooth
@@ -116,7 +116,6 @@
 /dev/jpeg3                0660   system     camera
 /dev/adsprpc-smd          0664   system     system
 /dev/system_health_monitor 0640  radio      system
-/dev/fpc1020              0666   system     system
 
 # wlan
 /dev/wcnss_wlan           0660   system     system
