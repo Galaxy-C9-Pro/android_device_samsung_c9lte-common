@@ -186,6 +186,13 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Release tools
 TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
 
+# RIL
+TARGET_RIL_VARIANT := caf
+BOARD_PROVIDES_LIBRIL := true
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+
+# Telephony
+BOARD_RIL_CLASS := $(VENDOR_PATH)/ril
