@@ -15,10 +15,10 @@
 #
 
 # inherit from the proprietary version
--include vendor/samsung/msm8976-common/BoardConfigVendor.mk
+-include vendor/samsung/c9lte-common/BoardConfigVendor.mk
 
 BOARD_VENDOR := samsung
-VENDOR_PATH := device/samsung/msm8976-common
+VENDOR_PATH := device/samsung/c9lte-common
 
 TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
 
