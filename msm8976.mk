@@ -101,9 +101,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8952 \
-    libbson \
-    Snap
+    camera.msm8952
 
 # Device characteristics
 PRODUCT_CHARACTERISTICS := phone
