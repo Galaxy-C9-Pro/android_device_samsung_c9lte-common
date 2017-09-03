@@ -196,9 +196,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 
-# Telephony
-BOARD_RIL_CLASS := $(COMMON_PATH)/ril
-
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true
