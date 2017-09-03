@@ -67,6 +67,10 @@ lib/libsamsungSoundbooster_plus.so
 lib/libmysound.so
 lib/libaudiosa.so
 
+# Audio Firmware
+etc/firmware/cs47l15-dsp1-karaoke-vocals.wmfw
+etc/firmware/cs47l15-dsp1-karaoke-vocals.bin
+
 # Bluetooth
 bin/btnvtool
 bin/wcnss_service
