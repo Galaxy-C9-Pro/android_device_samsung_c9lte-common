@@ -18,9 +18,9 @@
 -include vendor/samsung/c9lte-common/BoardConfigVendor.mk
 
 BOARD_VENDOR := samsung
-VENDOR_PATH := device/samsung/c9lte-common
+COMMON_PATH := device/samsung/c9lte-common
 
-TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
@@ -82,7 +82,7 @@ USE_CUSTOM_AUDIO_POLICY := 1
 #USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(VENDOR_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
@@ -101,7 +101,7 @@ BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS += \
     hardware/cyanogen/cmhw \
     hardware/samsung/cmhw \
-    $(VENDOR_PATH)/cmhw
+    $(COMMON_PATH)/cmhw
 
 # Dex
 ifeq ($(HOST_OS),linux)
@@ -134,7 +134,7 @@ OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 
-TARGET_ANDROID_FILESYSTEM_CONFIG_H := $(VENDOR_PATH)/android_filesystem_config.h
+TARGET_ANDROID_FILESYSTEM_CONFIG_H := $(COMMON_PATH)/android_filesystem_config.h
 
 # Fingerprint
 #TARGET_SEC_FP_HAL_VARIANT := bauth
@@ -172,7 +172,7 @@ TARGET_PER_MGR_ENABLED := true
 TARGET_POWERHAL_VARIANT := qcom
 
 # Properties
-TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 
 # Qualcomm
 BOARD_USES_QCOM_HARDWARE := true
@@ -185,19 +185,19 @@ BOARD_ROOT_EXTRA_SYMLINKS += /system/etc/firmware/btnv32.bin:/bt_firmware/image/
 BOARD_ROOT_EXTRA_SYMLINKS += /data/tombstones:/tombstones
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Release tools
-TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
+TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 
 # Telephony
-BOARD_RIL_CLASS := $(VENDOR_PATH)/ril
+BOARD_RIL_CLASS := $(COMMON_PATH)/ril
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
