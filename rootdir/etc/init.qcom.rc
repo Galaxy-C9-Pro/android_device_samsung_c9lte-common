@@ -60,6 +60,12 @@ on init
     # Support legacy paths
     symlink /sdcard /storage/sdcard0
 
+    # Reactivation Lock
+    symlink /dev/block/platform/soc.0/7824900.sdhci/by-name/steady /dev/block/steady
+
+    # Google FRP
+    symlink /dev/block/platform/soc.0/7824900.sdhci/by-name/persistent /dev/block/persistent
+
 on post-fs-data
     rm /data/logcat.txt
 
