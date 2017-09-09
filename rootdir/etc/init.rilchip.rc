@@ -44,7 +44,6 @@ service ril-daemon1 /system/bin/rild -c 2
     socket rild-debug2 stream 660 radio system
     user root
     group radio cache inet misc audio log qcom_diag system drmrpc sdcard_r sdcard_rw shell
-    disabled
 
 service SMD-daemon /system/bin/smdexe
     class main
