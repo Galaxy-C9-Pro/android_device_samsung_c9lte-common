@@ -257,7 +257,8 @@ on boot
     chown system system /sys/class/timed_output/vibrator/intensity
 
     # Permissions for Leds
-    chown system system /sys/class/leds/lcd-backlight/brightness
+    chown system system /sys/class/backlight/panel/brightness
+    chown system system /sys/class/backlight/panel/max_brightness
 
     # Permissions for LCD
     chown system system /sys/class/lcd/panel/adaptive_control
