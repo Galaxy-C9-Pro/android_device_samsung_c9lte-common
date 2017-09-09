@@ -208,10 +208,14 @@ PRODUCT_PACKAGES += \
     init.rilchip.rc \
     ueventd.qcom.rc
 
-# RIL
+# Radio
 PRODUCT_PACKAGES += \
     librmnetctl \
-    librilutils
+    libril \
+    librilutils \
+    rild \
+    libxml2 \
+    libprotobuf-cpp-full
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal large xlarge
