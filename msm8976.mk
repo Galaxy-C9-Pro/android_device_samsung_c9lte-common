@@ -201,7 +201,6 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
 
 PRODUCT_PACKAGES += \
-    control_netmgrd.sh \
     init.qcom.rc \
     init.qcom.sh \
     init.qcom.bt.sh \
