@@ -204,6 +204,7 @@ PRODUCT_PACKAGES += \
     init.qcom.bt.sh \
     init.qcom.power.rc \
     init.qcom.usb.rc \
+    init.rilchip.rc \
     ueventd.qcom.rc
 
 # RIL
