@@ -1549,6 +1549,18 @@ service config_bt_addr /system/bin/btnvtool -O
     group bluetooth radio
     oneshot
 
+service config_bluetooth /system/bin/sh /system/etc/init.qcom.bt.sh "onboot"
+    class core
+    user root
+    oneshot
+
+service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
+    class late_start
+    user bluetooth
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd
     class main
@@ -1612,6 +1624,24 @@ service loc_launcher /system/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
     class late_start
     group gps inet qcom_diag wifi
+
+service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
+    class late_start
+    user system
+    group system
+    disabled
+    oneshot
+
+service qcom-sh /system/bin/sh /init.qcom.sh
+    class late_start
+    user root
+    oneshot
+
+service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
+    class late_start
+    user root
+    disabled
+    oneshot
 
 service hostapd /system/bin/hostapd -dd /data/hostapd/hostapd.conf
     class late_start
