@@ -262,46 +262,6 @@ case "$target" in
         if [ -f /sys/devices/soc0/hw_platform ]; then
              hw_platform=`cat /sys/devices/soc0/hw_platform`
         fi
-        case "$soc_id" in
-             "264")
-                  case "$hw_platform" in
-                       "Surf")
-                            case "$platform_subtype_id" in
-                                 "1" | "2")
-                                      setprop qemu.hw.mainkeys 0
-                                      ;;
-                            esac
-                            ;;
-                       "MTP")
-                            case "$platform_subtype_id" in
-                                 "3")
-                                      setprop qemu.hw.mainkeys 0
-                                      ;;
-                            esac
-                            ;;
-                       "QRD")
-                            case "$platform_subtype_id" in
-                                 "0")
-                                      setprop qemu.hw.mainkeys 0
-                                      ;;
-                            esac
-                            ;;
-                  esac
-                  ;;
-             "266" | "274" | "277" | "278")
-                  case "$hw_platform" in
-                       "Surf" | "RCM")
-                           if [ $panel_xres -eq 1440 ]; then
-                               setprop qemu.hw.mainkeys 0
-                           fi
-                           ;;
-                       "MTP" | "QRD")
-                           setprop qemu.hw.mainkeys 0
-                           ;;
-                  esac
-                  ;;
-        esac
-        ;;
     "msm8994")
         start_msm_irqbalance
         ;;
