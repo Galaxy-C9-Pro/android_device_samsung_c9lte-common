@@ -291,6 +291,7 @@ vendor/lib64/libxt_native.so
 vendor/lib64/libxtadapter.so
 vendor/lib64/libxtwifi_ulp_adaptor.so
 
+## From A910FXXU1BQHB ##
 # Graphics
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
@@ -299,8 +300,8 @@ vendor/lib64/egl/libGLESv2_adreno.so
 vendor/lib64/egl/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/egl/libQTapGLES.so
-#vendor/lib64/hw/vulkan.msm8952.so
-vendor/lib64/libadreno_utils.so|f7299c94bd0bbbbbb2546cb1c1eb1a82bbce51fd
+vendor/lib64/hw/vulkan.msm8952.so
+vendor/lib64/libadreno_utils.so
 vendor/lib64/libbccQTI.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libc2d30-a5xx.so
@@ -309,7 +310,7 @@ vendor/lib64/libCB.so
 vendor/lib64/libgsl.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
-#vendor/lib64/libllvm-qgl.so
+vendor/lib64/libllvm-qgl.so
 vendor/lib64/libmm-disp-apis.so
 vendor/lib64/libmm-qdcm.so
 vendor/lib64/libOpenCL.so
@@ -325,8 +326,8 @@ vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/egl/libQTapGLES.so
-#vendor/lib/hw/vulkan.msm8952.so
-vendor/lib/libadreno_utils.so|068a84b05e35d5217bd253b7956eeb2f15512ac9
+vendor/lib/hw/vulkan.msm8952.so
+vendor/lib/libadreno_utils.so
 vendor/lib/libbccQTI.so
 vendor/lib/libC2D2.so
 vendor/lib/libc2d30-a5xx.so
@@ -335,7 +336,7 @@ vendor/lib/libCB.so
 vendor/lib/libgsl.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
-#vendor/lib/libllvm-qgl.so
+vendor/lib/libllvm-qgl.so
 vendor/lib/libmm-disp-apis.so
 vendor/lib/libmm-qdcm.so
 vendor/lib/libmmQSM.so
@@ -346,6 +347,7 @@ vendor/lib/libRSDriver_adreno.so
 vendor/lib/libsd_sdk_display.so
 vendor/lib/libscale.so
 
+## From A910FXXU1BQHB ##
 # Graphics firmware
 etc/firmware/a530_pfp.fw
 etc/firmware/a530_pm4.fw
