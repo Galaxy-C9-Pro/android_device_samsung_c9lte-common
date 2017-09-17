@@ -1473,12 +1473,6 @@ on post-fs-data
     write /data/misc/radio/db_check_done 0
     chown radio radio /data/misc/radio/db_check_done
     chmod 0660 /data/misc/radio/db_check_done
-    write /data/misc/radio/dakl
-    chown radio dpgp /data/misc/radio/dakl
-    chmod 0644 /data/misc/radio/dakl
-    write /data/misc/radio/mgzc
-    chown radio dpgp /data/misc/radio/mgzc
-    chmod 0644 /data/misc/radio/mgzc
 
     mkdir /data/tombstones 0771 system system
     mkdir /tombstones/modem 0771 system system
