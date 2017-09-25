@@ -210,6 +210,7 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.power.rc \
     init.qcom.usb.rc \
+    init.qcom.usb.sh \
     ueventd.qcom.rc
 
 # Radio
