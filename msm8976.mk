@@ -209,6 +209,7 @@ PRODUCT_PACKAGES += \
     init.qcom.fm.sh \
     init.qcom.post_boot.sh \
     init.qcom.power.rc \
+    init.target.rc \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     ueventd.qcom.rc

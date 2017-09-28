@@ -36,18 +36,8 @@ on early-init
     # Turn off backlight on blank
     write /sys/class/leds/lcd-backlight/trigger "backlight"
 
-    mkdir /firmware 0771 system system
-    mkdir /firmware-modem 0771 system system
-    mkdir /system 0777 root root
-    symlink /data/tombstones /tombstones
-    mkdir /dsp 0771 media media
-    mount debugfs debugfs /sys/kernel/debug
-    chmod 0755 /sys/kernel/debug
-    mkdir /bt_firmware
-    mkdir /bt_firmware/image
-
-    symlink /system/etc/firmware/btfw32.tlv /bt_firmware/image/btfw32.tlv
-    symlink /system/etc/firmware/btnv32.bin /bt_firmware/image/btnv32.bin
+#    symlink /system/etc/firmware/btfw32.tlv /bt_firmware/image/btfw32.tlv
+#    symlink /system/etc/firmware/btnv32.bin /bt_firmware/image/btnv32.bin
 
 on init
     # Set permissions for persist partition
@@ -57,6 +47,7 @@ on init
     mkdir /efs 0771 system radio
 
     # Support legacy paths
+    symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
 
     # Reactivation Lock
@@ -107,17 +98,8 @@ service logcat_debug /system/bin/logcat -b all -f /data/logcat.txt -v threadtime
     rm /data/data/com.android.providers.telephony/shared_prefs/preferred-apn.xml
 
 on fs
-    wait /dev/block/bootdevice
-    mount_all fstab.qcom
-    write /proc/sys/vm/swappiness 100
-    mkdir /persist/data 0700 system system
-    restorecon_recursive /persist
-    restorecon_recursive /dsp
-    chown system radio /efs
-    chmod 0771 /efs
-    restorecon_recursive /efs
-
-    rm -rf /efs/dmverity
+    # Use swappiness 60 for 6gb ram
+    write /proc/sys/vm/swappiness 60
 
     #NFC
     chmod 0660 /dev/sec-nfc
@@ -1474,16 +1456,6 @@ on post-fs-data
     chown radio radio /data/misc/radio/db_check_done
     chmod 0660 /data/misc/radio/db_check_done
 
-    mkdir /data/tombstones 0771 system system
-    mkdir /tombstones/modem 0771 system system
-    mkdir /tombstones/lpass 0771 system system
-    mkdir /tombstones/wcnss 0771 system system
-    mkdir /tombstones/dsps 0771 system system
-    mkdir /persist/data/sfs 0700 system system
-    mkdir /persist/data/tz 0700 system system
-    mkdir /data/misc/dts 0770 media audio
-    mkdir /data/misc/audio_pp 0771 media audio
-
     # Fingerprint
     mkdir /dev/validity 0770 system system
     mkdir /data/validity 0770 system system
@@ -1547,12 +1519,6 @@ service start_hci_filter /system/bin/wcnss_filter
     user bluetooth
     group bluetooth qcom_diag
     disabled
-
-service wcnss-service /system/bin/wcnss_service
-    class main
-    user system
-    group system wifi radio
-    oneshot
 
 service config_bt_addr /system/bin/btnvtool -O
     class core
@@ -1699,38 +1665,10 @@ service msm_irqbal_lb /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqba
     group root
     writepid /dev/cpuset/system-background/tasks
 
-# Start camera server as daemon
-service qcamerasvr /system/bin/mm-qcamera-daemon
-    class late_start
-    user camera
-    group camera system inet input graphics
-    writepid /dev/cpuset/camera-daemon/tasks
-
-service qseecomd /system/bin/qseecomd
-    class core
-    user root
-    group root
-    writepid /dev/cpuset/system-background/tasks
-
 service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
     class late_start
     user system
     group system
-    writepid /dev/cpuset/system-background/tasks
-
-service perfd /system/vendor/bin/perfd
-    class main
-    user root
-    disabled
-    writepid /dev/cpuset/system-background/tasks
-
-service thermal-engine /system/vendor/bin/thermal-engine
-    class main
-    user root
-    socket thermal-send-client stream 0666 system system
-    socket thermal-recv-client stream 0660 system system
-    socket thermal-recv-passive-client stream 0666 system system
-    group root
     writepid /dev/cpuset/system-background/tasks
 
 service timekeep /system/bin/timekeep restore
@@ -1738,29 +1676,6 @@ service timekeep /system/bin/timekeep restore
     user root
     group root
     oneshot
-    writepid /dev/cpuset/system-background/tasks
-
-service audiod /system/bin/audiod
-    class late_start
-    user system
-    group system
-
-service adsprpcd /system/bin/adsprpcd
-    class main
-    user media
-    group media
-
-service per_mgr /system/bin/pm-service
-    class core
-    user system
-    group system
-    writepid /dev/cpuset/system-background/tasks
-
-service per_proxy /system/bin/pm-proxy
-    class core
-    user system
-    group system
-    disabled
     writepid /dev/cpuset/system-background/tasks
 
 on property:init.svc.per_mgr=running
