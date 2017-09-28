@@ -123,6 +123,10 @@ PRODUCT_PACKAGES += \
     memtrack.msm8952 \
     liboverlay
 
+# Doze
+PRODUCT_PACKAGES += \
+    SamsungDoze
+
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
     fs_config_files
