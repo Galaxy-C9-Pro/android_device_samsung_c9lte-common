@@ -73,7 +73,7 @@ etc/firmware/cs47l15-dsp1-karaoke-vocals.bin
 
 # Bluetooth
 bin/btnvtool
-bin/wcnss_service
+bin/hci_qcomm_init
 vendor/lib64/libbtnv.so
 
 # Camera
@@ -448,5 +448,6 @@ vendor/lib/libthermalclient.so
 # WideVine
 vendor/lib/mediadrm/libwvdrmengine.so
 
-# WiFi Firmware
+# WiFi
+bin/wcnss_service
 etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
