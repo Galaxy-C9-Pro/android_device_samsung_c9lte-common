@@ -429,13 +429,6 @@ etc/nfc/sec_s3nrn81_rfreg.bin
 vendor/firmware/nfc/sec_s3nrn81_firmware.bin
 vendor/firmware/ram_patch.fw
 
-# Network
--priv-app/QtiTetherService/QtiTetherService.apk
-vendor/lib64/libconnctrl.so
-vendor/lib64/libQtiTether.so
-vendor/lib/libconnctrl.so
-vendor/lib/libQtiTether.so
-
 # Perf
 bin/msm_irqbalance
 vendor/bin/perfd
