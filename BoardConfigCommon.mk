@@ -106,6 +106,9 @@ BOARD_HARDWARE_CLASS += \
     hardware/samsung/cmhw \
     $(COMMON_PATH)/cmhw
 
+# CNE
+BOARD_USES_QCNE := true
+
 # Dex
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
@@ -191,6 +194,12 @@ BOARD_ROOT_EXTRA_SYMLINKS += /data/tombstones:/tombstones
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+
+# RIL
+BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_11
+BOARD_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_11
+TARGET_RIL_VARIANT := caf
+PROTOBUF_SUPPORTED := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
