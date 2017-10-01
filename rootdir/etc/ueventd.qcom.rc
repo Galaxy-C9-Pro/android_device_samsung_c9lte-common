@@ -49,7 +49,7 @@
 /dev/dpl_ctrl             0660   usb        usb
 
 #permissions for CSVT
-/dev/smd11                0660   radio     radio
+/dev/smd11                0660   system     loop_radio
 
 /dev/radio0               0640   system     system
 /dev/rfcomm0              0660   bluetooth  bluetooth
