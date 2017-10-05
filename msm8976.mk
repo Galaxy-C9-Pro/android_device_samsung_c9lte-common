@@ -231,6 +231,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal large xlarge
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf \
+    $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf
+
 # TimeKeep
 PRODUCT_PACKAGES += \
     timekeep \
