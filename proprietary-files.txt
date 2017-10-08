@@ -582,3 +582,23 @@ vendor/lib/mediadrm/libwvdrmengine.so
 # WiFi
 bin/wcnss_service
 etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+
+####
+vendor/media/LMspeed_508.emd
+vendor/media/PFFprec_600.emd
+etc/firmware/cpp_firmware_v1_1_1.fw
+etc/firmware/cpp_firmware_v1_1_6.fw
+etc/firmware/cpp_firmware_v1_2_0.fw
+etc/firmware/cpp_firmware_v1_4_0.fw
+etc/firmware/cpp_firmware_v1_5_0.fw
+etc/firmware/cpp_firmware_v1_6_0.fw
+etc/firmware/cpp_firmware_v1_8_0.fw
+etc/firmware/cpp_firmware_v1_10_0.fw
+etc/firmware/DE.o.msm8952
+etc/firmware/DE.o.msm8976
+etc/firmware/ice40.bin
+etc/firmware/leia_pfp_470.fw
+etc/firmware/leia_pm4_470.fw
+etc/firmware/ois_SE_BU24219.bin
+etc/firmware/ois_SP_BU24219.bin
+etc/firmware/ois_VE_BU24219.bin
