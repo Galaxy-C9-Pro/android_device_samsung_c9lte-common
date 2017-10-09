@@ -180,6 +180,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
     $(COMMON_PATH)/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    keystore.msm8952
+
 # Lights
 PRODUCT_PACKAGES += \
     lights.MSM8952
