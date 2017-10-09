@@ -242,6 +242,15 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     ueventd.qcom.rc
 
+# Radio
+PRODUCT_PACKAGES += \
+    librmnetctl \
+    libril \
+    librilutils \
+    rild \
+    libxml2 \
+    libprotobuf-cpp-full
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal large xlarge
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
