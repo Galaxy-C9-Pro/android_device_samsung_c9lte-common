@@ -297,6 +297,3 @@ PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
     tcpdump \
     wcnss_service
-
-PRODUCT_COPY_FILES += \
-    kernel/samsung/msm8976/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat
