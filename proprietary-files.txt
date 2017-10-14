@@ -83,6 +83,8 @@ vendor/lib/libaptXScheduler.so|6a0a2d564fde8434018b9840ce81d976b4d4ab28
 # Camera
 bin/mm-qcamera-daemon
 etc/camera/msm8976_camera_c9lte.xml
+etc/camera/msm8952_camera.xml
+etc/camera/msm8976_camera.xml
 etc/camera/M16QL_s5k3p8sx_chromatix.xml
 etc/camera/O16QL_s5k3p8sx_chromatix.xml
 etc/M16QL_s5k3p8sx_ak7372_module_info.xml
@@ -177,6 +179,13 @@ vendor/lib/libmmcamera_tuning_lookup.so
 vendor/lib/libmmcamera_ubifocus_lib.so
 vendor/lib/libmmcamera_vpu_module.so
 vendor/lib/libmmjpeg.so
+vendor/lib64/libmmcamera2_is.so
+vendor/lib64/libmmcamera_dbg.so
+vendor/lib64/libmmcamera2_q3a_core.so
+vendor/lib64/libmmcamera2_sensor_debug.so
+vendor/lib64/libmmcamera2_frame_algorithm.so
+vendor/lib64/libmmcamera2_stats_algorithm.so
+
 lib/libmmjpeg_interface.so
 lib/libqomx_core.so
 lib/libsblcv.so
@@ -184,7 +193,19 @@ vendor/lib/libts_detected_face_hal.so
 vendor/lib/libts_face_beautify_hal.so
 
 # Camera actuators
+vendor/lib/libactuator_ad5823.so
+vendor/lib/libactuator_ak7371.so
 vendor/lib/libactuator_ak7372.so
+vendor/lib/libactuator_dw9714.so
+vendor/lib/libactuator_dw9716.so
+vendor/lib/libactuator_dw9807.so
+vendor/lib/libactuator_ad5816g.so
+vendor/lib/libactuator_bu64297.so
+vendor/lib/libactuator_dw9761b.so
+vendor/lib/libactuator_lc898122.so
+vendor/lib/libactuator_bu64244gwz.so
+vendor/lib/libactuator_lc898212xd.so
+vendor/lib/libactuator_rohm_bu64243gwz.so
 
 # Camera chromatix
 vendor/lib/libchromatix_s5k6b2yx_1080p_preview_lc898122.so
