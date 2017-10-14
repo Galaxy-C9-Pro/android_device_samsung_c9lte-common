@@ -106,9 +106,6 @@ BOARD_HARDWARE_CLASS += \
     hardware/samsung/cmhw \
     $(COMMON_PATH)/cmhw
 
-# CNE
-BOARD_USES_QCNE := true
-
 # Dex
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)

@@ -265,15 +265,6 @@ PRODUCT_PACKAGES += \
     timekeep \
     TimeKeep
 
-# Libshims
-PRODUCT_PACKAGES+=\
-    libshims_ims
-
-# IPACM
-PRODUCT_PACKAGES += \
-    IPACM_cfg.xml \
-    ipacm
-
 # NFC
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/nfc/libnfc-sec-hal.conf:system/etc/libnfc-sec-hal.conf \
