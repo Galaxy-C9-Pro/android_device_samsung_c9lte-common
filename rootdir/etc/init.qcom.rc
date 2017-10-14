@@ -1484,7 +1484,7 @@ on property:persist.env.fastdorm.enabled=true
 service cnd /system/bin/cnd
     class late_start
     socket cnd stream 660 root inet
-    writepid /dev/cpuset/system-background/task
+    writepid /dev/cpuset/system-background/tasks
 
 service dpmd /system/bin/dpmd
     class late_start
@@ -1546,7 +1546,20 @@ service qmuxd /system/bin/qmuxd
 
 service netmgrd /system/bin/netmgrd
     class main
-
+    writepid /dev/cpuset/system-background/tasks 
+ 
+service ipacm-diag /system/bin/ipacm-diag 
+    class main 
+    user system 
+    socket ipacm_log_file dgram 660 system net_admin 
+    group net_admin qcom_diag 
+    writepid /dev/cpuset/system-background/tasks 
+ 
+service ipacm /system/bin/ipacm 
+    class main 
+    user net_admin 
+    group net_admin inet 
+    writepid /dev/cpuset/system-background/tasks
 service qti /system/vendor/bin/qti
     class main
     user radio
