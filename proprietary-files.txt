@@ -285,11 +285,13 @@ lib64/hw/fingerprint.default.so
 vendor/lib64/hw/gatekeeper.msm8952.so
 
 # GPS
+-priv-app/com.qualcomm.location/com.qualcomm.location.apk
 bin/garden_app
 bin/loc_launcher
 bin/xtwifi-client
 bin/xtwifi-inet-agent
 etc/permissions/com.qti.location.sdk.xml
+etc/permissions/com.qualcomm.location.xml
 #etc/permissions/izat.xt.srv.xml
 framework/com.qti.location.sdk.jar
 framework/org.apache.http.legacy.boot.jar
