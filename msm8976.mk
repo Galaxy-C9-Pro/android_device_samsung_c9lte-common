@@ -240,6 +240,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
+    init.qti.ims.sh \
     ueventd.qcom.rc
 
 # Screen density
