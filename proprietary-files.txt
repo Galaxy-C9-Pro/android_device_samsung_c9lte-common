@@ -266,14 +266,20 @@ vendor/lib64/libStDrvInt.so
 vendor/lib/libQSEEComAPI.so
 
 # FingerPrint
-lib64/libbauthserver.so
-lib64/libbauthtzcommon.so
-lib64/libegis_fp_normal_sensor_test.so
-lib64/libsynaFpSensorTestNwd.so
+-priv-app/FingerprintServiceExtension/FingerprintServiceExtension.apk
+bin/fingerprintd
+etc/permissions/android.hardware.fingerprint.xml
+etc/permissions/com.sec.feature.fingerprint_manager_service.xml
 lib/libbauthserver.so
 lib/libbauthtzcommon.so
 lib/libegis_fp_normal_sensor_test.so
 lib/libsynaFpSensorTestNwd.so
+lib/hw/fingerprint.default.so
+lib64/libbauthserver.so
+lib64/libbauthtzcommon.so
+lib64/libegis_fp_normal_sensor_test.so
+lib64/libsynaFpSensorTestNwd.so
+lib64/hw/fingerprint.default.so
 
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.msm8952.so
