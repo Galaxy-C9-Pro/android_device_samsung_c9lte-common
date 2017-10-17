@@ -285,13 +285,11 @@ lib64/hw/fingerprint.default.so
 vendor/lib64/hw/gatekeeper.msm8952.so
 
 # GPS
--priv-app/com.qualcomm.location/com.qualcomm.location.apk
 bin/garden_app
 bin/loc_launcher
 bin/xtwifi-client
 bin/xtwifi-inet-agent
 etc/permissions/com.qti.location.sdk.xml
-etc/permissions/com.qualcomm.location.xml
 #etc/permissions/izat.xt.srv.xml
 framework/com.qti.location.sdk.jar
 framework/org.apache.http.legacy.boot.jar
@@ -389,7 +387,6 @@ etc/firmware/a530_pm4.fw
 -app/ImsSettings/ImsSettings.apk
 -app/ImsTelephonyService/ImsTelephonyService.apk
 -priv-app/ImsLogger+/ImsLogger+.apk
--priv-app/imsservice/imsservice.apk
 bin/imscmservice
 bin/imsd
 etc/permissions/commonimsinterface_library.xml
@@ -401,7 +398,6 @@ framework/commonimsinterface.jar
 framework/ims-common.jar
 framework/imscmlibrary.jar
 framework/imsmanager.jar
-framework/secimshttpclient.jar
 lib64/libsec-ims.so
 vendor/lib/lib-ims-rcscmjni.so
 vendor/lib/lib-imsrcs.so
