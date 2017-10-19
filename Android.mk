@@ -193,7 +193,7 @@ $(RFS_APQ_GNSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /firmware $@/readonly/firmware
 
 RFS_MDM_ADSP_SYMLINKS := $(TARGET_OUT)/rfs/mdm/adsp/
-$(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+$(RFS_MDM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS MDM ADSP folder structure: $@"
 	@rm -rf $@
 	@mkdir -p $(dir $@)/readonly
@@ -204,7 +204,7 @@ $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /firmware $@/readonly/firmware
 
 RFS_MDM_MPSS_SYMLINKS := $(TARGET_OUT)/rfs/mdm/mpss/
-$(RFS_MSM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+$(RFS_MDM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS MDM MPSS folder structure: $@"
 	@rm -rf $@
 	@mkdir -p $(dir $@)/readonly
@@ -234,7 +234,7 @@ $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /persist/rfs/msm/adsp $@/readwrite
 	$(hide) ln -sf /persist/rfs/shared $@/shared
 	$(hide) ln -sf /persist/hlos_rfs/shared $@/hlos
-	$(hide) ln -sf /firmware-modem $@/readonly/firmware
+	$(hide) ln -sf /firmware $@/readonly/firmware
 
 RFS_MSM_MPSS_SYMLINKS := $(TARGET_OUT)/rfs/msm/mpss/
 $(RFS_MSM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
@@ -245,8 +245,8 @@ $(RFS_MSM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /persist/rfs/msm/mpss $@/readwrite
 	$(hide) ln -sf /persist/rfs/shared $@/shared
 	$(hide) ln -sf /persist/hlos_rfs/shared $@/hlos
-	$(hide) ln -sf /firmware-modem $@/readonly/firmware
+	$(hide) ln -sf /firmware $@/readonly/firmware
 
-ALL_DEFAULT_INSTALLED_MODULES += $(ADSP_SYMLINKS) $(CMN_SYMLINKS) $(CMN64_SYMLINKS) $(CPE_SYMLINKS) $(ISDB_SYMLINKS) $(IMS_SYMLINKS) $(CARDAPP_SYMLINKS) $(MBA_SYMLINKS) $(MDTP_SYMLINKS) $(MODEM_SYMLINKS) $(MISC_SYMLINKS) $(VENUS_SYMLINKS) $(WCNSS_SYMLINKS) $(WV_SYMLINKS) $(RFS_APQ_GNSS_SYMLINKS) $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS) $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS)
+ALL_DEFAULT_INSTALLED_MODULES += $(ADSP_SYMLINKS) $(CMN_SYMLINKS) $(CMN64_SYMLINKS) $(CPE_SYMLINKS) $(ISDB_SYMLINKS) $(IMS_SYMLINKS) $(CARDAPP_SYMLINKS) $(MBA_SYMLINKS) $(MDTP_SYMLINKS) $(MODEM_SYMLINKS) $(MISC_SYMLINKS) $(VENUS_SYMLINKS) $(WCNSS_SYMLINKS) $(WV_SYMLINKS) $(RFS_APQ_GNSS_SYMLINKS) $(RFS_MDM_ADSP_SYMLINKS) $(RFS_MDM_MPSS_SYMLINKS) $(RFS_MDM_SPARROW_SYMLINKS) $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS)
 
 endif
