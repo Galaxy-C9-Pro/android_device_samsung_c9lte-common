@@ -1,3 +1,61 @@
+########### C9LTECHN
+# Radio
+bin/netmgrd
+bin/qmuxd
+bin/radish
+bin/rmt_storage
+bin/tftp_server
+bin/rild
+etc/libnfc-sec.conf
+etc/data/dsi_config.xml
+etc/data/netmgr_config.xml
+etc/data/qmi_config.xml
+lib/libprotobuf-cpp-full.so
+lib/libprotobuf-cpp-lite.so
+lib/libril.so
+lib/libreference-ril.so
+lib/librmnetctl.so
+lib/libsecnativefeature.so
+lib/libsec-ril.so
+lib/libsec-ril-dsds.so
+lib/libsecril-client.so
+lib/librilutils.so
+lib64/libprotobuf-cpp-full.so
+lib64/libprotobuf-cpp-lite.so
+lib64/libreference-ril.so
+lib64/libril.so
+lib64/libsecnativefeature.so
+lib64/libsec-ril.so
+lib64/libsec-ril-dsds.so
+lib64/libsecril-client.so
+lib64/librilutils.so
+lib64/librmnetctl.so
+vendor/bin/qti
+vendor/lib/libconfigdb.so
+vendor/lib/libmdmdetect.so
+vendor/lib/libnetmgr.so
+vendor/lib/libril-qcril-hook-oem.so
+vendor/lib/libril-qc-radioconfig.so
+vendor/lib/libxml.so
+vendor/lib64/libconfigdb.so
+vendor/lib64/libmdmdetect.so
+vendor/lib64/libnetmgr.so
+vendor/lib64/libqcmaputils.so
+vendor/lib64/libril-qcril-hook-oem.so
+vendor/lib64/libril-qc-radioconfig.so
+vendor/lib64/libxml.so
+#
+# Wireless
+etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+etc/firmware/wlan/prima/WCNSS_cfg.dat
+#
+#lib64/libfloatingfeature.so
+#lib/libfloatingfeature.so
+
+
+
+######################################
 # ACBD Data
 etc/Bluetooth_cal.acdb
 etc/General_cal.acdb
@@ -68,8 +126,8 @@ lib/libmysound.so
 lib/libaudiosa.so
 
 # Audio Firmware
-etc/firmware/cs47l15-dsp1-karaoke-vocals.wmfw
-etc/firmware/cs47l15-dsp1-karaoke-vocals.bin
+#etc/firmware/cs47l15-dsp1-karaoke-vocals.wmfw
+#etc/firmware/cs47l15-dsp1-karaoke-vocals.bin
 
 # Bluetooth
 bin/btnvtool
@@ -77,8 +135,8 @@ bin/hci_qcomm_init
 vendor/lib64/libbtnv.so
 
 # aptX (Moto griffin - NCLS25.86-11-4-6-5)
-vendor/lib/libaptX-1.0.0-rel-Android21-ARMv7A.so|b03772672144d4b750a5672c2922aded93bb0512
-vendor/lib/libaptXScheduler.so|6a0a2d564fde8434018b9840ce81d976b4d4ab28
+#vendor/lib/libaptX-1.0.0-rel-Android21-ARMv7A.so|b03772672144d4b750a5672c2922aded93bb0512
+#vendor/lib/libaptXScheduler.so|6a0a2d564fde8434018b9840ce81d976b4d4ab28
 
 # Camera
 bin/mm-qcamera-daemon
@@ -89,7 +147,7 @@ etc/camera/M16QL_s5k3p8sx_chromatix.xml
 etc/camera/O16QL_s5k3p8sx_chromatix.xml
 etc/M16QL_s5k3p8sx_ak7372_module_info.xml
 etc/O16QL_s5k3p8sx_module_info.xml
-lib/hw/camera.msm8952.so:lib/hw/camera.vendor.msm8952.so
+lib/hw/camera.msm8952.so
 lib/libuniplugin.so
 lib64/libuniplugin.so
 vendor/lib/libfastcvadsp_stub.so
@@ -119,7 +177,7 @@ vendor/lib/libmmcamera2_vpe_module.so
 vendor/lib/libmmcamera2_wnr_module.so
 vendor/lib/libmmcamera_cac3_lib.so
 vendor/lib/libmmcamera_chromaflash_lib.so
-vendor/lib/libmmcamera_csidtg.so
+#vendor/lib/libmmcamera_csidtg.so
 vendor/lib/libmmcamera_dbg.so
 vendor/lib/libmmcamera_dcrf_lib.so
 vendor/lib/libmmcamera_eeprom_util.so
@@ -266,7 +324,7 @@ vendor/lib64/libStDrvInt.so
 vendor/lib/libQSEEComAPI.so
 
 # FingerPrint
--priv-app/FingerprintServiceExtension/FingerprintServiceExtension.apk
+#-priv-app/FingerprintServiceExtension/FingerprintServiceExtension.apk
 bin/fingerprintd
 etc/permissions/android.hardware.fingerprint.xml
 etc/permissions/com.sec.feature.fingerprint_manager_service.xml
@@ -291,9 +349,9 @@ bin/xtwifi-client
 bin/xtwifi-inet-agent
 etc/permissions/com.qti.location.sdk.xml
 #etc/permissions/izat.xt.srv.xml
-framework/com.qti.location.sdk.jar
-framework/org.apache.http.legacy.boot.jar
-framework/com.qti.snapdragon.sdk.display.jar
+#framework/com.qti.location.sdk.jar
+#framework/org.apache.http.legacy.boot.jar
+#framework/com.qti.snapdragon.sdk.display.jar
 #framework/izat.xt.srv.jar
 lib64/hw/gps.default.so
 lib64/libgps.utils.so
@@ -384,20 +442,20 @@ etc/firmware/a530_pfp.fw
 etc/firmware/a530_pm4.fw
 
 # IMS
--app/ImsSettings/ImsSettings.apk
--app/ImsTelephonyService/ImsTelephonyService.apk
--priv-app/ImsLogger+/ImsLogger+.apk
+#app/ImsSettings/ImsSettings.apk
+#priv-app/ImsTelephonyService/ImsTelephonyService.apk
+#priv-app/ImsLogger+/ImsLogger+.apk
 bin/imscmservice
 bin/imsd
-etc/permissions/commonimsinterface_library.xml
+#etc/permissions/commonimsinterface_library.xml
 etc/permissions/imscm.xml
 etc/permissions/imsmanager_library.xml
 etc/permissions/secimshttpclient_library.xml
 etc/permissions/vsimservice_library.xml
-framework/commonimsinterface.jar
-framework/ims-common.jar
-framework/imscmlibrary.jar
-framework/imsmanager.jar
+#framework/commonimsinterface.jar
+#framework/ims-common.jar
+#framework/imscmlibrary.jar
+#framework/imsmanager.jar
 lib64/libsec-ims.so
 vendor/lib/lib-ims-rcscmjni.so
 vendor/lib/lib-imsrcs.so
@@ -441,7 +499,7 @@ vendor/lib/libOmxWmaDec.so
 # NFC
 etc/nfc/sec_s3nrn81_rfreg.bin
 vendor/firmware/nfc/sec_s3nrn81_firmware.bin
-vendor/firmware/ram_patch.fw
+#vendor/firmware/ram_patch.fw
 
 # Perf
 bin/msm_irqbalance
@@ -494,8 +552,8 @@ lib64/libsecnativefeature.so
 lib/libsecnativefeature.so
 
 # Sensors
-lib64/hw/sensors.MSM8976.so:lib64/hw/sensors.MSM8952.so
-lib/hw/sensors.MSM8976.so:lib/hw/sensors.MSM8952.so
+lib64/hw/sensors.MSM8976.so
+lib/hw/sensors.MSM8976.so
 vendor/lib64/libsensor1.so
 vendor/lib/libsensor1.so
 
