@@ -79,21 +79,11 @@
     <ctl name="QUIN_MI2S_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="QUIN_MI2S_RX Audio Mixer MultiMedia4" value="0" />
     <ctl name="QUIN_MI2S_RX Audio Mixer MultiMedia5" value="0" />
-    <ctl name="QUIN_MI2S_RX Audio Mixer MultiMedia7" value="0" />
-    <ctl name="QUIN_MI2S_RX Audio Mixer MultiMedia10" value="0" />
-    <ctl name="QUIN_MI2S_RX Audio Mixer MultiMedia11" value="0" />
-    <ctl name="QUIN_MI2S_RX Audio Mixer MultiMedia12" value="0" />
-    <ctl name="QUIN_MI2S_RX Audio Mixer MultiMedia13" value="0" />
-    <ctl name="QUIN_MI2S_RX Audio Mixer MultiMedia14" value="0" />
 
     <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia17" value="0" />
     <ctl name="QUIN_MI2S_RX Audio Mixer MultiMedia17" value="0" />
 	<ctl name="Voice_Tx Mixer QUIN_MI2S_TX_Voice" value="0" />
 	<ctl name="VoLTE_Tx Mixer QUIN_MI2S_TX_VoLTE" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia1" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia4" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia5" value="0" />
-    <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia17" value="0" />
 	
     <!-- Voice BTSCO -->
     <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_8KHZ" />
@@ -301,6 +291,11 @@
     <path name="deep-buffer-playback speaker-and-bt-sco">
         <path name="deep-buffer-playback bt-sco" />
         <path name="deep-buffer-playback speaker-amp" />
+    </path>
+
+    <path name="deep-buffer-playback speaker-and-bt-sco-wb">
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
+        <path name="deep-buffer-playback speaker-and-bt-sco" />
     </path>
 
     <path name="low-latency-playback">
@@ -1022,8 +1017,8 @@
 		<ctl name="HPOUT1R Input 1" value="AIF1RX2" />
 		<ctl name="HPOUT1L Input 1 Volume" value="32" />
 		<ctl name="HPOUT1R Input 1 Volume" value="32" />
-		<ctl name="HPOUT1L Impedance Volume" value="119" />
-		<ctl name="HPOUT1R Impedance Volume" value="119" />
+		<ctl name="HPOUT1L Impedance Volume" value="108" />
+		<ctl name="HPOUT1R Impedance Volume" value="108" />
 		<ctl name="HPOUT1 Digital Switch" value="1" />
 		<ctl name="HPOUT1 Demux" value="HPOUT" />
     </path>
@@ -1124,8 +1119,6 @@
 
     <path name="headset">
         <path name="ear" />
-		<ctl name="HPOUT1L Impedance Volume" value="108" />
-		<ctl name="HPOUT1R Impedance Volume" value="108" />
     </path>
 
     <path name="speaker-and-headphones">
@@ -1138,6 +1131,11 @@
 
     <path name="speaker-and-bt-sco">
         <path name="spk" />
+    </path>
+
+    <path name="speaker-and-bt-sco-wb">
+        <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
+        <path name="speaker-and-bt-sco" />
     </path>
 
     <path name="speaker-and-proxy">
@@ -1803,8 +1801,14 @@
     <path name="voip-handset-carrier">
         <path name="rcv" />
     </path>
+    <path name="voip-handset-carrier-extra-vol">
+        <path name="rcv" />
+    </path>
 
     <path name="voip-speaker-carrier">
+        <path name="spk" />
+    </path>
+    <path name="voip-speaker-carrier-extra-vol">
         <path name="spk" />
     </path>
 
@@ -1827,12 +1831,12 @@
     <!-- TX part -->
     <path name="voip-main-mic-comm">
         <path name="main-mic" />
-        <ctl name="IN1L Volume" value="15" />
+        <ctl name="IN1L Volume" value="20" />
     </path>
 
     <path name="voip-sub-mic-comm">
         <path name="sub-mic" />
-	<ctl name="IN1R Volume" value="15" />
+	<ctl name="IN1R Volume" value="20" />
     </path>
 
     <path name="voip-headphone-mic-comm">
@@ -1964,6 +1968,16 @@
         <path name="ear-mic" />
 	<ctl name="IN1L Volume" value="15" />
     </path>
+	<path name="voip-NS-mic-handset-carrier">
+        <path name="main-sub-mic" />
+	    <ctl name="IN1L Volume" value="15" />
+	    <ctl name="IN1R Volume" value="15" />
+	</path>
+	<path name="voip-NS-mic-speaker-carrier">
+		<path name="sub-main-mic" />
+		<ctl name="IN1L Volume" value="15" />
+		<ctl name="IN1R Volume" value="15" />
+	</path>
     <!-- end of VoIP Scenario -->
 
     <!-- ================================================================ -->

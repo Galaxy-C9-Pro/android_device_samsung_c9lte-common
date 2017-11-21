@@ -89,11 +89,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/audio/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
     $(COMMON_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    $(COMMON_PATH)/audio/audio_effects_sec.conf:system/vendor/etc/audio_effects_sec.conf \
     $(COMMON_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(COMMON_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(COMMON_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
     $(COMMON_PATH)/audio/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
     $(COMMON_PATH)/audio/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
+    $(COMMON_PATH)/audio/sound_trigger_mixer_paths_wcd9335.xml:system/etc/sound_trigger_mixer_paths_wcd9335.xml \
     $(COMMON_PATH)/audio/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
     $(COMMON_PATH)/audio/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml \
     $(COMMON_PATH)/audio/mixer_paths_wcd9335.xml:system/etc/mixer_paths_wcd9335.xml \
@@ -161,7 +163,8 @@ PRODUCT_PACKAGES += \
 
 # IPC router config
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/sec_config:system/etc/sec_config
+    $(COMMON_PATH)/configs/sec_config:system/etc/sec_config \
+    $(COMMON_PATH)/configs/sec_config_oem:system/etc/sec_config_oem
 
 # IPv6
 PRODUCT_PACKAGES += \
@@ -193,8 +196,10 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    $(COMMON_PATH)/configs/media_codecs.xml:system/etc/media_codecs_8956.xml \
     $(COMMON_PATH)/configs/media_codecs.xml:system/etc/media_codecs_8956_v1.xml \
     $(COMMON_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+    $(COMMON_PATH)/configs/media_codecs_performance_8956.xml:system/etc/media_codecs_performance_8956.xml \
     $(COMMON_PATH)/configs/media_codecs_performance_8956_v1.xml:system/etc/media_codecs_performance_8956_v1.xml \
     $(COMMON_PATH)/configs/media_profiles_8956.xml:system/etc/media_profiles_8956.xml \
     $(COMMON_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
