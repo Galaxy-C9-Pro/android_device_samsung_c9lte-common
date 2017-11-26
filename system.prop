@@ -48,7 +48,7 @@ ro.qualcomm.bt.hci_transport=smd
 qcom.bluetooth.soc=smd
 
 # CABL
-ro.qualcomm.cabl=2
+ro.qualcomm.cabl=0
 
 # Camera
 media.camera.ts.monotonic=0
@@ -63,13 +63,14 @@ ro.sys.fw.dex2oat_thread_count=4
 # Display
 debug.egl.hw=0
 debug.enable.sglscale=1
+debug.gralloc.enable_fb_ubwc=1
 debug.mdpcomp.logs=0
-debug.sf.hw=0
+debug.sf.hw=1
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 persist.hwc.mdpcomp.enable=true
 persist.hwc.downscale_threshold=1.15
-ro.opengles.version=196609
+ro.opengles.version=196610
 ro.sf.lcd_density=420
 
 # Force HAL1 for below packages
@@ -95,6 +96,10 @@ media.stagefright.less-secure=true
 ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
 persist.data.mode=concurrent
+persist.timed.enable=true
+
+# system prop for NFC DT
+ro.nfc.port=I2C
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
@@ -107,7 +112,7 @@ rild.libpath=/system/lib64/libsec-ril.so
 rild.libpath2=/system/lib64/libsec-ril-dsds.so
 persist.radio.multisim.config=dsds
 ro.multisim.simslotcount=2
-persist.cne.feature=0
+persist.cne.feature=1
 persist.radio.tdscdma_present=1
 persist.radio.lte_vrte_ltd=1
 persist.radio.apm_sim_not_pwdn=1
