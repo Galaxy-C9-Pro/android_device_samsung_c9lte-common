@@ -44,15 +44,15 @@ vendor/lib64/libqcmaputils.so
 vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/libxml.so
+etc/permissions/qcrilhook.xml
+system/framework/qcrilhook.jar
 #
 # Wireless
 etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 etc/firmware/wlan/prima/WCNSS_cfg.dat
-#
-#lib64/libfloatingfeature.so
-#lib/libfloatingfeature.so
-
+etc/firmware/wlan/prima/grippower.info
+bin/wcnss_service
 
 
 ######################################
@@ -77,6 +77,12 @@ vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
+vendor/lib/rfsa/adsp/libobjectMattingApp_skel.so
+vendor/lib/rfsa/adsp/libpanorama_skel.so
+vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
+vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
+vendor/lib/rfsa/adsp/libscveT2T_skel.so
+vendor/lib/rfsa/adsp/libscveTextReco_skel.so
 
 # Audio libraries
 vendor/lib64/libacdb-fts.so
@@ -126,6 +132,7 @@ lib/libmysound.so
 lib/libaudiosa.so
 
 # Audio Firmware
+bin/auditd
 #etc/firmware/cs47l15-dsp1-karaoke-vocals.wmfw
 #etc/firmware/cs47l15-dsp1-karaoke-vocals.bin
 
@@ -134,9 +141,9 @@ bin/btnvtool
 bin/hci_qcomm_init
 vendor/lib64/libbtnv.so
 
-# aptX (Moto griffin - NCLS25.86-11-4-6-5)
-#vendor/lib/libaptX-1.0.0-rel-Android21-ARMv7A.so|b03772672144d4b750a5672c2922aded93bb0512
-#vendor/lib/libaptXScheduler.so|6a0a2d564fde8434018b9840ce81d976b4d4ab28
+# aptX
+lib/libbt-aptX-ARM-4.2.2.so
+lib/libbt-codec_aptx.so
 
 # Camera
 bin/mm-qcamera-daemon
@@ -322,6 +329,10 @@ vendor/lib64/libSecureUILib.so
 vendor/lib64/libssd.so
 vendor/lib64/libStDrvInt.so
 vendor/lib/libQSEEComAPI.so
+lib/drm/libfwdlockengine.so
+lib/drm/libomaplugin.so
+lib64/drm/libfwdlockengine.so
+lib64/drm/libomaplugin.so
 
 # FingerPrint
 #-priv-app/FingerprintServiceExtension/FingerprintServiceExtension.apk
@@ -435,6 +446,9 @@ vendor/lib/librs_adreno_sha1.so
 vendor/lib/libRSDriver_adreno.so
 vendor/lib/libsd_sdk_display.so
 vendor/lib/libscale.so
+lib64/egl/libGLES_android.so
+lib/egl/egl.cfg
+lib/egl/libGLES_android.so
 
 ## From A910FXXU1BQHB ##
 # Graphics firmware
@@ -553,7 +567,9 @@ lib/libsecnativefeature.so
 
 # Sensors
 lib64/hw/sensors.MSM8976.so
+lib64/hw/sensorhubs.MSM8976.so
 lib/hw/sensors.MSM8976.so
+lib/hw/sensorhubs.MSM8976.so
 vendor/lib64/libsensor1.so
 vendor/lib/libsensor1.so
 
@@ -572,9 +588,12 @@ vendor/lib/libthermalclient.so
 # WideVine
 vendor/lib/mediadrm/libwvdrmengine.so
 
-# WiFi
-bin/wcnss_service
-etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+# RIDL
+vendor/etc/RIDL/GoldenLogmask.dmc
+vendor/etc/RIDL/OriginalGoldenLog.dmc
+vendor/etc/RIDL/OTA-Logs.dmc
+vendor/etc/RIDL/qdss.cfg
+vendor/etc/RIDL/RIDL.db
 
 ####
 vendor/media/LMspeed_508.emd
@@ -595,3 +614,15 @@ etc/firmware/leia_pm4_470.fw
 etc/firmware/ois_SE_BU24219.bin
 etc/firmware/ois_SP_BU24219.bin
 etc/firmware/ois_VE_BU24219.bin
+vendor/bin/audioflacapp
+vendor/bin/chamomile_provision
+vendor/bin/LKCore
+vendor/bin/mdtpd
+vendor/bin/mm-pp-daemon
+vendor/bin/mm-qjpeg-dec-test
+vendor/bin/mm-qjpeg-enc-test
+vendor/bin/mm-qomx-idec-test
+vendor/bin/mm-qomx-ienc-test
+vendor/bin/qjpeg-dma-test
+vendor/bin/RIDLClient.exe
+vendor/bin/seemp_healthd

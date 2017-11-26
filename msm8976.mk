@@ -88,8 +88,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/audio/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
-    $(COMMON_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-    $(COMMON_PATH)/audio/audio_effects_sec.conf:system/vendor/etc/audio_effects_sec.conf \
+    $(COMMON_PATH)/audio/audio_effects.conf:system/etc/audio_effects.conf \
+    $(COMMON_PATH)/audio/audio_effects_sec.conf:system/etc/audio_effects_sec.conf \
     $(COMMON_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(COMMON_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(COMMON_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
