@@ -575,10 +575,10 @@ vendor/lib/libsensor1.so
 
 # Thermal
 vendor/bin/thermal-engine
-#vendor/lib64/libsmemlog.so
+vendor/lib64/libsmemlog.so
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
-#vendor/lib/libsmemlog.so
+vendor/lib/libsmemlog.so
 vendor/lib/libthermalclient.so
 
 # Time services
