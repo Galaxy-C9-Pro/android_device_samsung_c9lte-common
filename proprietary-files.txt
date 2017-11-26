@@ -45,7 +45,7 @@ vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/libxml.so
 etc/permissions/qcrilhook.xml
-system/framework/qcrilhook.jar
+framework/qcrilhook.jar
 #
 # Wireless
 etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
@@ -359,16 +359,16 @@ bin/loc_launcher
 bin/xtwifi-client
 bin/xtwifi-inet-agent
 etc/permissions/com.qti.location.sdk.xml
-#etc/permissions/izat.xt.srv.xml
-#framework/com.qti.location.sdk.jar
-#framework/org.apache.http.legacy.boot.jar
+etc/permissions/izat.xt.srv.xml
+framework/com.qti.location.sdk.jar
+framework/org.apache.http.legacy.boot.jar
 #framework/com.qti.snapdragon.sdk.display.jar
-#framework/izat.xt.srv.jar
+framework/izat.xt.srv.jar
 lib64/hw/gps.default.so
 lib64/libgps.utils.so
 -lib64/libloc_api_v02.so
 lib64/libloc_core.so
-#lib64/libloc_ds_api.so
+lib64/libloc_ds_api.so
 lib64/libloc_eng.so
 vendor/lib64/hw/flp.default.so
 vendor/lib64/libalarmservice_jni.so
@@ -467,9 +467,9 @@ etc/permissions/imsmanager_library.xml
 etc/permissions/secimshttpclient_library.xml
 etc/permissions/vsimservice_library.xml
 #framework/commonimsinterface.jar
-#framework/ims-common.jar
+framework/ims-common.jar
 #framework/imscmlibrary.jar
-#framework/imsmanager.jar
+framework/imsmanager.jar
 lib64/libsec-ims.so
 vendor/lib/lib-ims-rcscmjni.so
 vendor/lib/lib-imsrcs.so
