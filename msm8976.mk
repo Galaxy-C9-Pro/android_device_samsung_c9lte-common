@@ -270,7 +270,7 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/nfc/libnfc-sec-hal.conf:system/etc/libnfc-sec-hal.conf \
-    $(COMMON_PATH)/configs/nfc/libnfc-sec.conf:system/etc/libnfc-sec.conf \
+    $(COMMON_PATH)/configs/nfc/libnfc-sec.conf:system/etc/libnfc-brcm.conf \
     $(COMMON_PATH)/configs/nfc/nfcee_access.xml:system/etc/nfcee_access.xml
 
 PRODUCT_PACKAGES += \
