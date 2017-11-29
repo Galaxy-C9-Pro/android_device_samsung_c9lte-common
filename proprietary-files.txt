@@ -272,6 +272,7 @@ vendor/lib/libactuator_lc898212xd.so
 vendor/lib/libactuator_rohm_bu64243gwz.so
 
 # Camera chromatix
+vendor/lib/libchromatix_s5k3p8sx_m16ql_isp_snapshot.so
 vendor/lib/libchromatix_s5k6b2yx_1080p_preview_lc898122.so
 vendor/lib/libchromatix_s5k6b2yx_1080p_video_lc898122.so
 vendor/lib/libchromatix_s5k6b2yx_4k_preview_lc898122.so
