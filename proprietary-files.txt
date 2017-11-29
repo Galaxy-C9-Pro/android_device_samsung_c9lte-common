@@ -6,7 +6,7 @@ bin/radish
 bin/rmt_storage
 bin/tftp_server
 bin/rild
-etc/libnfc-sec.conf
+#etc/libnfc-sec.conf
 etc/data/dsi_config.xml
 etc/data/netmgr_config.xml
 etc/data/qmi_config.xml
