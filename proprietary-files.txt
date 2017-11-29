@@ -625,3 +625,9 @@ vendor/bin/mm-qomx-ienc-test
 vendor/bin/qjpeg-dma-test
 vendor/bin/RIDLClient.exe
 vendor/bin/seemp_healthd
+vendor/lib/libadsp_default_listener.so
+vendor/lib/libllvd_smore.so
+vendor/lib/libmdtp.so
+vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libcneapiclient.so
+vendor/lib64/libmdtp.so
