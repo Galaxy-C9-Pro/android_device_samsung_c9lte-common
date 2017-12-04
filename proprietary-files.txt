@@ -20,6 +20,8 @@ lib/libsec-ril.so
 lib/libsec-ril-dsds.so
 lib/libsecril-client.so
 lib/librilutils.so
+lib/libfloatingfeature.so
+lib64/libfloatingfeature.so
 lib64/libprotobuf-cpp-full.so
 lib64/libprotobuf-cpp-lite.so
 lib64/libreference-ril.so
