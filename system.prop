@@ -1,4 +1,4 @@
-# Audio
+#Audio
 #Audio voice concurrency related flags
 voice.playback.conc.disabled=true
 voice.record.conc.disabled=false
@@ -42,25 +42,22 @@ audio.pp.asphere.enabled=false
 #property to enable DS2 dap
 audio.dolby.ds2.enabled=true
 
-# Bluetooth
+#Bluetooth
 bluetooth.hfp.client=1
+bt.max.hfpclient.connections=1
 ro.qualcomm.bt.hci_transport=smd
 qcom.bluetooth.soc=smd
 
-# CABL
+#CABL
 ro.qualcomm.cabl=0
 
-# Camera
+#Camera
 media.camera.ts.monotonic=0
 
-# Core control
-ro.core_ctl_min_cpu=2
-ro.core_ctl_max_cpu=4
-
-# Dex2oat threads for faster app installation
+#Dex2oat threads for faster app installation
 ro.sys.fw.dex2oat_thread_count=4
 
-# Display
+#Display
 debug.egl.hw=0
 debug.enable.sglscale=1
 debug.gralloc.enable_fb_ubwc=1
@@ -73,17 +70,20 @@ persist.hwc.downscale_threshold=1.15
 ro.opengles.version=196610
 ro.sf.lcd_density=420
 
-# Force HAL1 for below packages
+#Force HAL1 for below packages
 camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 
-# FRP
+#FRP
 ro.frp.pst=/dev/block/persistent
 
-# GPS
+#GPS
 persist.gps.qc_nlp_in_use=1
 ro.gps.agps_provider=1
 
-# Media
+#initialize QCA1530 detection
+sys.qca1530=detection
+
+#Media
 media.msm8956hw=0
 media.msm8956.version=0
 mm.enable.smoothstreaming=true
@@ -92,22 +92,34 @@ media.aac_51_output_enabled=true
 media.stagefright.legacyencoder=true
 media.stagefright.less-secure=true
 
-# Netmgrd
+#Netmgrd
 ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
 persist.data.mode=concurrent
-persist.timed.enable=true
 
-# system prop for NFC DT
+#NFC DT
 ro.nfc.port=I2C
 
-# Perf
+#Perf
 ro.vendor.extension_library=libqti-perfd-client.so
-ro.min_freq_0=400000
-ro.min_freq_4=400000
 ro.sys.fw.bg_apps_limit=60
 
-# Telephony
+#RmNet Data
+persist.rmnet.data.enable=true
+persist.data.wda.enable=true
+persist.data.df.dl_mode=5
+persist.data.df.ul_mode=5
+persist.data.df.agg.dl_pkt=10
+persist.data.df.agg.dl_size=4096
+persist.data.df.mux_count=8
+persist.data.df.iwlan_mux=9
+persist.data.df.dev_name=rmnet_usb0
+
+#Status of softsim
+persist.sys.softsim.status=default,default
+persist.sys.softsim.netmode=3g
+
+#Telephony
 rild.libpath=/system/lib64/libsec-ril.so
 rild.libpath2=/system/lib64/libsec-ril-dsds.so
 persist.radio.multisim.config=dsds
@@ -124,12 +136,15 @@ persist.data.dropssdp=false
 telephony.lteOnCdmaDevice=1
 #persist.radio.lw_enabled=true
 persist.radio.sib16_support=0
+persist.radio.custom_ecc=1
+persist.radio.VT_CAM_INTERFACE=1
+persist.radio.new.profid=true
 
-# TCP
+#TCP
 net.tcp.2g_init_rwnd=10
 
-# Time
+#Time
 persist.timed.enable=true
 
-# WiFi
+#WiFi
 wifi.interface=wlan0
