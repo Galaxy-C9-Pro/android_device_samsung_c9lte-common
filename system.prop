@@ -74,7 +74,7 @@ ro.sf.lcd_density=420
 camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 
 #FRP
-ro.frp.pst=/dev/block/persistent
+#ro.frp.pst=/dev/block/persistent
 
 #GPS
 persist.gps.qc_nlp_in_use=1
