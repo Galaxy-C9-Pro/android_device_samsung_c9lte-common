@@ -86,6 +86,11 @@ PRODUCT_PACKAGES += \
     tinymix \
     libtinyalsa
 
+# Audio TFA-AMP
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/audio/Tfa9897.cnt:system/etc/Tfa9897.cnt \
+    $(COMMON_PATH)/audio/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/audio/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
     $(COMMON_PATH)/audio/audio_effects.conf:system/etc/audio_effects.conf \
@@ -247,6 +252,12 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.qti.ims.sh \
     ueventd.qcom.rc
+
+# RIL
+PRODUCT_PACKAGES += \
+    libril \
+    librilutils \
+    libxml2
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal large xlarge

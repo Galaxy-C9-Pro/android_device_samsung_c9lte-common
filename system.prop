@@ -70,6 +70,9 @@ persist.hwc.downscale_threshold=1.15
 ro.opengles.version=196610
 ro.sf.lcd_density=420
 
+#Fingerprint
+persist.qfp=false
+
 #Force HAL1 for below packages
 camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 
