@@ -251,7 +251,8 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.qti.ims.sh \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    powersnd.rc
 
 # RIL
 PRODUCT_PACKAGES += \

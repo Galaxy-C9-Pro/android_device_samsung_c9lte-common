@@ -16,6 +16,12 @@ vendor/lib/libadsprpc.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
 
+# Audio AMP Helper
+bin/samsungpowersoundplay
+lib/libsamsungpowersound.so
+lib/libsecaudioinfo.so
+lib64/libsecaudioinfo.so
+
 # ADSP modules
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
