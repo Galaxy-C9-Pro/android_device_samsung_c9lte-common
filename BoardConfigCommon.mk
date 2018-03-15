@@ -173,9 +173,6 @@ TARGET_KERNEL_CONFIG := lineage_c9pro_defconfig
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
 
-# NFC
-BOARD_NFC_HAL_SUFFIX := msm8953
-
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
