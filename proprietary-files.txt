@@ -16,6 +16,28 @@ vendor/lib/libadsprpc.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
 
+# Audio AMP
+lib/hw/audio.primary.msm8952.so
+lib/libtinyalsa.so
+lib/libtinycompress.so
+lib/libaudioroute.so
+lib/libaudioeffect_jni.so
+lib/libaudioutils.so
+lib/libexpat.so
+lib/librecordalive.so
+lib/libSamsungPostProcess.so
+lib/libSamsungPostProcessConvertor.so
+lib/libsamsungeffect.so
+lib/libsamsungearcare.so
+lib/libsamsungVoipResampler.so
+lib/libsamsungSoundbooster_plus.so
+lib/lib_DNSe_EP_ver216c.so
+lib/lib_SamsungRec_06003.so
+lib/lib_SamsungVAD_v01009.so
+lib/lib_soundaliveresampler.so
+lib/lib_SoundBooster_ver700.so
+lib/lib_SoundAlive_SRC384_ver300.so
+
 # Audio AMP Helper
 bin/samsungpowersoundplay
 lib/libsamsungpowersound.so
