@@ -1660,12 +1660,30 @@ service ril-daemon /system/bin/rild
     user root
     group radio cache inet misc audio log qcom_diag system drmrpc vpn
 
-service ril-daemon1 /system/bin/rild -c 2
+service ril-daemon1 /system/bin/rild -l /system/lib64/libsec-ril-dsds.so -c 2
     class main
     socket rild2 stream 660 root radio
     socket rild-debug2 stream 660 radio system
     user root
-    group radio cache inet misc audio log qcom_diag system drmrpc sdcard_r sdcard_rw shell
+    group radio cache inet misc audio log qcom_diag system drmrpc sdcard_r sdcard_rw shell readproc
+    disabled
+
+service ril-daemon2 /system/bin/rild -c 3
+    class main
+    socket rild3 stream 660 root radio
+    socket rild-debug3 stream 660 radio system
+    user root
+    disabled
+    group radio cache inet misc audio sdcard_r sdcard_rw qcom_diag diag log
+
+on property:persist.radio.multisim.config=dsds
+    stop ril-daemon
+    start ril-daemon
+    start ril-daemon1
+
+on property:persist.radio.multisim.config=tsts
+    start ril-daemon1
+    start ril-daemon2
 
 service charger /charger
     class charger
