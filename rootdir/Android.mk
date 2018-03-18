@@ -97,10 +97,3 @@ LOCAL_MODULE_CLASS	:= ETC
 LOCAL_SRC_FILES		:= etc/init.qti.ims.sh
 LOCAL_MODULE_PATH       := $(TARGET_OUT)/etc
 include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE               := powersnd.rc
-LOCAL_MODULE_CLASS         := ETC
-LOCAL_SRC_FILES            := etc/powersnd.rc
-LOCAL_MODULE_RELATIVE_PATH := init
-include $(BUILD_PREBUILT)
