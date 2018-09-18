@@ -5,7 +5,7 @@
   },
   {
     "repository": "android_kernel_samsung_msm8976",
-    "target_path": "kernel/samsung/msm8976"
+    "target_path": "kernel/samsung/c9pro"
   },
   {
     "repository": "android_hardware_samsung",
@@ -14,9 +14,5 @@
   {
     "repository": "android_hardware_sony_timekeep",
     "target_path": "hardware/sony/timekeep"
-  },
-  {
-    "repository": "android_packages_resources_devicesettings",
-    "target_path": "packages/resources/devicesettings"
   }
 ]

@@ -1,1 +1,0 @@
-https://github.com/LineageOS/android_hardware_ril/commit/892c17bf67ab361851285d43baafe1f2319775dc

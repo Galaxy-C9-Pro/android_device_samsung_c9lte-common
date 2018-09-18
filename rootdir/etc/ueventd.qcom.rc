@@ -26,7 +26,7 @@
 #
 
 # the DIAG device node is not world writable/readable.
-/dev/diag                 0660   system     qcom_diag
+/dev/diag                 0660   system     oem_2950
 
 /dev/genlock              0666   system     system
 /dev/kgsl                 0666   system     system
@@ -252,6 +252,7 @@
 
 # Add device block for FRP
 /dev/block/platform/soc.0/7824900.sdhci/by-name/config    0660   system     system
+/dev/block/platform/soc.0/7824900.sdhci/by-name/persistent    0660   system     system 
 
 # cpufreq_governor
 /sys/devices/system/cpu/cpu*	cpufreq/interactive/above_hispeed_delay    0660  system system

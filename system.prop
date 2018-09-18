@@ -1,63 +1,46 @@
-#Audio
-#Audio voice concurrency related flags
-voice.playback.conc.disabled=true
-voice.record.conc.disabled=false
-voice.voip.conc.disabled=true
-#Decides the audio fallback path during voice call, deep-buffer and fast are the two allowed fallback paths now.
-voice.conc.fallbackpath=deep-buffer
-#parser input buffer size(256kb) in byte stream mode
-audio.parser.ip.buffer.size=262144
-#snapdragon value add features
-ro.qc.sdk.audio.ssr=false
-##fluencetype can be "fluence" or "fluencepro" or "none"
-ro.qc.sdk.audio.fluencetype=none
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicerec=false
-persist.audio.fluence.speaker=true
-#Set for msm8952
-tunnel.audio.encode = false
-#Buffer size in kbytes for compress offload playback
-audio.offload.buffer.size.kb=64
-#Enable offload audio video playback by default
-audio.offload.video=true
-#Enable PCM offload by default
-audio.offload.pcm.16bit.enable=true
-audio.offload.pcm.24bit.enable=true
-#Enable music through deep buffer
+# Audio
+af.fast_track_multiplier=1
 audio.deep_buffer.media=true
-#enable voice path for PCM VoIP by default
-use.voice.path.for.pcm.voip=true
-#enable downsampling for multi-channel content > 48Khz
-audio.playback.mch.downsample=true
-#System property for FM transmitter
-ro.fm.transmitter=false
-#enable dsp gapless mode by default
-audio.offload.gapless.enabled=false
-#multi offload
-audio.offload.multiple.enabled=false
-#enable pbe effects
-audio.safx.pbe.enabled=true
-#property for AudioSphere Post processing
-audio.pp.asphere.enabled=false
-#property to enable DS2 dap
-audio.dolby.ds2.enabled=true
+audio.offload.min.duration.secs=30
+audio.offload.video=true
+audio_hal.period_size=192
+persist.vendor.audio.fluence.speaker=true
+persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicerec=false
+ro.vendor.audio.sdk.fluencetype=none
+ro.vendor.audio.sdk.ssr=false
+vendor.audio.dolby.ds2.enabled=true
+vendor.audio.offload.buffer.size.kb=64
+vendor.audio.offload.gapless.enabled=true
+vendor.audio.offload.multiple.enabled=false
+vendor.audio.offload.track.enable=true
+vendor.audio.playback.mch.downsample=true
+vendor.audio.rec.playback.conc.disabled=true
+vendor.audio.safx.pbe.enabled=true
+vendor.audio.tunnel.encode=false
+vendor.audio.use.sw.alac.decoder=true
+vendor.audio.use.sw.ape.decoder=true
+vendor.voice.conc.fallbackpath=deep-buffer
+vendor.voice.path.for.pcm.voip=true
+vendor.voice.playback.conc.disabled=true
+vendor.voice.record.conc.disabled=false
 
-#Bluetooth
+# Bluetooth
 bluetooth.hfp.client=1
 bt.max.hfpclient.connections=1
 ro.qualcomm.bt.hci_transport=smd
 qcom.bluetooth.soc=smd
 
-#CABL
+# Camera
+media.camera.ts.monotonic=1
+
+# CABL
 ro.qualcomm.cabl=0
 
-#Camera
-media.camera.ts.monotonic=0
-
-#Dex2oat threads for faster app installation
+# Dex2oat threads for faster app installation
 ro.sys.fw.dex2oat_thread_count=4
 
-#Display
+# Display
 debug.egl.hw=0
 debug.enable.sglscale=1
 debug.gralloc.enable_fb_ubwc=1
@@ -70,59 +53,28 @@ persist.hwc.downscale_threshold=1.15
 ro.opengles.version=196610
 ro.sf.lcd_density=420
 
-#Fingerprint
-persist.qfp=false
-
-#Force HAL1 for below packages
-camera.hal1.packagelist=com.skype.raider,com.google.android.talk
-
-#FRP
-#ro.frp.pst=/dev/block/persistent
-
-#GPS
+# GPS
 persist.gps.qc_nlp_in_use=1
 ro.gps.agps_provider=1
 
-#initialize QCA1530 detection
+# Initialize QCA1530 detection
 sys.qca1530=detection
 
-#Media
+# Media
 media.msm8956hw=0
 media.msm8956.version=0
 mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
-media.stagefright.legacyencoder=true
-media.stagefright.less-secure=true
 
-#Netmgrd
-ro.use_data_netmgrd=true
-persist.data.netmgrd.qos.enable=true
-persist.data.mode=concurrent
-
-#NFC DT
+# NFC DT
 ro.nfc.port=I2C
 
-#Perf
+# Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.sys.fw.bg_apps_limit=60
 
-#RmNet Data
-persist.rmnet.data.enable=true
-persist.data.wda.enable=true
-persist.data.df.dl_mode=5
-persist.data.df.ul_mode=5
-persist.data.df.agg.dl_pkt=10
-persist.data.df.agg.dl_size=4096
-persist.data.df.mux_count=8
-persist.data.df.iwlan_mux=9
-persist.data.df.dev_name=rmnet_usb0
-
-#Status of softsim
-persist.sys.softsim.status=default,default
-persist.sys.softsim.netmode=3g
-
-#Telephony
+# Radio/Telephony
 rild.libpath=/system/lib64/libsec-ril.so
 rild.libpath2=/system/lib64/libsec-ril-dsds.so
 persist.radio.multisim.config=dsds
@@ -143,11 +95,21 @@ persist.radio.custom_ecc=1
 persist.radio.VT_CAM_INTERFACE=1
 persist.radio.new.profid=true
 
-#TCP
+# Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
+ro.telephony.call_ring.multiple=0
+
+# Status of softsim
+persist.sys.softsim.status=default,default
+persist.sys.softsim.netmode=3g
+
+# Security patch level
+ro.lineage.build.vendor_security_patch=2018-01-01
+
+# TCP
 net.tcp.2g_init_rwnd=10
 
-#Time
+# Time
 persist.timed.enable=true
 
-#WiFi
+# WiFi
 wifi.interface=wlan0

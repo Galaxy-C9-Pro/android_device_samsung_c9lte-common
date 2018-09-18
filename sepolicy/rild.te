@@ -1,0 +1,5 @@
+allow rild proc_net:file w_file_perms;
+
+r_dir_file(rild, app_efs_file)
+
+set_prop(rild, system_radio_prop)
